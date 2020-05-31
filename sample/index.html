@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+		<title></title>
+		<style>
+			body{
+				width:1200px;
+				height:800px;
+				background:#fffae8;
+				position: fixed;
+			}
+			.login{
+			    position:absolute;
+				border-radius: 10px;
+				box-shadow: 0 0 10px #000;
+			    border:1px solid #fff;
+				/* background-color: #0000FF; */
+				text-align: center;
+			}
+			.login .title{
+			    height:50px;
+			    line-height:50px;
+			    position:relative;
+				border-bottom:1px solid #ff5500;
+				text-align: center;
+			}
+			.login .title #close{
+			    position:absolute;
+			    right:10px;
+			    top:0px;
+				cursor: pointer;
+				font-size: 24px;
+			}
+			button{
+				 width:100px;
+				 height:25px;
+				 border:none;
+				 background: #ff5500;
+				 color:#fff;
+				 z-index: 9999;
+			}
+			.left{
+				  position:absolute;
+				  left:10px;bottom:5px;
+			}
+			.right{
+				  position:absolute;
+				  right:10px;bottom:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="请点击此处" id="btn">
+	</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/xql01-1.2.2.min.js"></script>
+<!-- <script src="../src/index.js"></script> -->
+<script>	
+	// 自定义参数
+		var obj = {
+			_w:"300",
+			_h:"200",
+			_title:"啦啦啦",
+			color:"#fff",
+			_cont:"终于写完啦",
+			bg:"skyblue",
+			callback:finished
+		}
+		
+		//回调函数
+		function finished(){
+			console.log("回调函数");
+		}
+		btn.onclick = function(){
+			$("body").css("background","rgba(255,255,127,0.3)")
+			var move = new Move(obj); 
+		}
+</script>
